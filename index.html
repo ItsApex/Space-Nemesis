@@ -1,0 +1,162 @@
+<head> </head>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<div id="heading">SPACE NEMESIS</div>
+<div id="story">
+  Zeltros, a strong robot created in the future by scientists with the goal of
+  restoring our planet's habitability, arrives at the present time to wipe out
+  humanity because the reason for our planet's re-habitability is due to humans'
+  negligent usage of non-renewable resources. As a result, Jodd (an Earth
+  superhero) battles Zeltros in order to vanquish him.
+</div>
+
+<button id="playBtn" onclick="play()">Play</button>
+
+<!-- Video TAg  -->
+<video id="myVideo" autoplay loop muted>
+  <source src="./Assets/Back.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<button id="playAgain" onclick="playAgain()">Play Again</button>
+
+<body style="display: flex; justify-content: center; background-color: black">
+  <div class="canvasInc">
+    <!--red container div-->
+    <div
+      id="bar"
+      style="position: relative; border-radius: 10px; display: none"
+    >
+      <!--smallrer red container-->
+      <div
+        style="
+          position: absolute;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          border-radius: 10px;
+
+          padding: 20px;
+        "
+      >
+        <!--player health-->
+        <div
+          style="
+            border-radius: 10px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border: 3px solid white;
+          "
+        >
+          <div
+            style="
+              background-color: red;
+              height: 30px;
+              width: 100%;
+              border-radius: 10px;
+            "
+          ></div>
+          <div
+            id="playerHealth"
+            style="
+              border-radius: 10px;
+              position: absolute;
+              background: #818cf8;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+            "
+          ></div>
+        </div>
+        <!--timer-->
+        <div
+          id="timer"
+          style="
+            border-radius: 10px;
+            background-color: black;
+            width: 100px;
+            height: 50px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: rgb(255, 255, 255);
+            border: 2px solid white;
+          "
+        ></div>
+        <!--enemy health-->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid white;
+          "
+        >
+          <div style="
+          background-color: red;
+           height: 30px;    
+         border-radius: 10px;
+           "></div>
+
+          <div
+            id="enemyHealth"
+            style="
+              border-radius: 10px;
+
+              position: absolute;
+              background: #818cf8;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            "
+          ></div>
+        </div>
+      </div>
+      <div
+        id="displayText"
+        style="
+          border-radius: 10px;
+
+          position: absolute;
+          color: black;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: none;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 35px;
+          color: white;
+        "
+      >
+        TIE
+      </div>
+      <canvas style="margin: 50px; background-color: black"></canvas>
+    </div>
+  </div>
+
+  <embed
+    src="Background.mp3"
+    loop="true"
+    autostart="true"
+    width="2"
+    height="0"
+  />
+
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
