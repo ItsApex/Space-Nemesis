@@ -1,3 +1,7 @@
+
+
+
+
 class Sprite {
   constructor({
     position,

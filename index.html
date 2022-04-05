@@ -1,4 +1,7 @@
-<head> </head>
+<head> 
+
+
+</head>
 <link rel="stylesheet" href="style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +17,8 @@
   negligent usage of non-renewable resources. As a result, Jodd (an Earth
   superhero) battles Zeltros in order to vanquish him.
 </div>
+
+
 
 <button id="playBtn" onclick="play()">Play</button>
 
@@ -148,13 +153,10 @@
     </div>
   </div>
 
-  <embed
-    src="Background.mp3"
-    loop="true"
-    autostart="true"
-    width="2"
-    height="0"
-  />
+<audio autoplay controls loop  style="display :none;">
+    <source src="BG.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <script src="js/utils.js"></script>
   <script src="js/classes.js"></script>
